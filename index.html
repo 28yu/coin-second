@@ -17,19 +17,38 @@
     <div id="progress-bar"></div>
     
     <!-- ヘッダーナビゲーション -->
-    <header class="site-header">
-        <div class="container">
-            <h1 class="site-title">コインランドリービジネス検討資料</h1>
-            <nav class="progress-nav" id="progressNav">
-                <a href="#size" data-section="size">サイズ</a>
-                <a href="#investment" data-section="investment">投資</a>
-                <a href="#rent" data-section="rent">家賃</a>
-                <a href="#financing" data-section="financing">融資</a>
-                <a href="#payback" data-section="payback">回収</a>
-                <a href="#comparison" data-section="comparison">比較</a>
-            </nav>
+<header class="site-header">
+    <div class="container header-container">
+        <h1 class="site-title">コインランドリービジネス検討資料</h1>
+        
+        <!-- 言語切り替えボタン(NEW) -->
+        <div class="language-switcher">
+            <a href="index.html" class="lang-btn active" data-lang="ja" aria-label="日本語版を表示中">
+                <span class="flag">🇯🇵</span>
+                <span class="lang-text">日本語</span>
+            </a>
+            <a href="#" class="lang-btn disabled" data-lang="en" 
+               title="English version coming soon" 
+               aria-label="英語版は準備中です">
+                <span class="flag">🇬🇧</span>
+                <span class="lang-text">English</span>
+                <span class="badge">
+                    <span class="badge-icon">🚧</span>
+                    <span class="badge-text">Coming Soon</span>
+                </span>
+            </a>
         </div>
-    </header>
+        
+        <nav class="progress-nav" id="progressNav">
+            <a href="#size" data-section="size">サイズ</a>
+            <a href="#investment" data-section="investment">投資</a>
+            <a href="#rent" data-section="rent">家賃</a>
+            <a href="#financing" data-section="financing">融資</a>
+            <a href="#payback" data-section="payback">回収</a>
+            <a href="#comparison" data-section="comparison">比較</a>
+        </nav>
+    </div>
+</header>
 
     <main class="main-content">
         
