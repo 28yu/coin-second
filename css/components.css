@@ -1,0 +1,250 @@
+/* ========================================
+   カード共通
+======================================== */
+.card, 
+.intro-card,
+.size-card,
+.equipment-card,
+.reasoning-box,
+.rent-card,
+.conclusion-card {
+    background: var(--color-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-lg);
+    border: 3px solid var(--color-text);
+    position: relative;
+}
+
+/* 手書き風の歪み効果 */
+.card::before,
+.intro-card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: var(--border-radius);
+    background: var(--color-primary);
+    z-index: -1;
+    transform: rotate(-1deg);
+}
+
+/* ========================================
+   イントロカード
+======================================== */
+.intro-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.intro-card {
+    text-align: center;
+    max-width: var(--content-max);
+    margin: 0 auto;
+}
+
+.intro-card h2 {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+}
+
+/* ========================================
+   サイズカード
+======================================== */
+.size-overview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.size-card {
+    text-align: center;
+    min-width: 300px;
+    background: var(--color-primary);
+    border-color: var(--color-text);
+}
+
+.size-number {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.size-sqm {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-light);
+}
+
+/* ========================================
+   設備グリッド
+======================================== */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.equipment-card {
+    text-align: center;
+    padding: var(--spacing-md);
+    transition: var(--transition-base);
+}
+
+.equipment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.equipment-icon {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.equipment-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+.quantity {
+    display: inline-block;
+    background: var(--color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-weight: 700;
+    margin-top: var(--spacing-xs);
+}
+
+/* ========================================
+   根拠ボックス
+======================================== */
+.reasoning-box {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    background: var(--color-bg-gray);
+}
+
+.reasoning-box h3 {
+    margin-bottom: var(--spacing-md);
+}
+
+.reasoning-list {
+    list-style: none;
+}
+
+.reasoning-list li {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.reasoning-list .icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--color-success);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.reasoning-list strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+.reasoning-list p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* ========================================
+   コネクター(矢印)
+======================================== */
+.section-connector {
+    position: relative;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-lg) 0;
+}
+
+.connector-arrow {
+    width: 100px;
+    height: 100px;
+}
+
+.connector-bubble {
+    position: absolute;
+    bottom: 20px;
+    background: var(--color-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-text);
+    font-weight: 600;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 分岐コネクター */
+.section-connector.fork {
+    height: 200px;
+}
+
+.fork-question {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+    background: var(--color-primary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-text);
+}
+
+.connector-fork {
+    width: 200px;
+    height: 100px;
+}
+
+/* ========================================
+   レスポンシブ
+======================================== */
+@media (max-width: 768px) {
+    .equipment-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-sm);
+    }
+    
+    .size-card {
+        min-width: 250px;
+    }
+    
+    .connector-bubble {
+        font-size: var(--font-size-sm);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
