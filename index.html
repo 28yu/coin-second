@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コインランドリービジネス比較資料 | Laundromat Business Guide</title>
+    
+    <!-- CSS読み込み(順序重要) -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+    
+    <!-- プログレスバー -->
+    <div id="progress-bar"></div>
+    
+    <!-- ヘッダーナビゲーション -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">コインランドリービジネス検討資料</h1>
+            <nav class="progress-nav" id="progressNav">
+                <a href="#size" data-section="size">サイズ</a>
+                <a href="#investment" data-section="investment">投資</a>
+                <a href="#rent" data-section="rent">家賃</a>
+                <a href="#financing" data-section="financing">融資</a>
+                <a href="#payback" data-section="payback">回収</a>
+                <a href="#comparison" data-section="comparison">比較</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <!-- イントロ -->
+        <section class="intro-section">
+            <div class="container">
+                <div class="intro-card">
+                    <h2>📍 想定立地：東京都大田区</h2>
+                    <p class="subtitle">Location: Ota-ku, Tokyo</p>
+                    <p>小型店舗モデルでの開業を前提に、個人開業とフランチャイズを比較します</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション1: 店舗サイズ -->
+        <section id="size" class="content-section section-size">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2>想定する店舗サイズ</h2>
+                    <p class="section-subtitle">Assumed Store Size</p>
+                </div>
+
+                <div class="size-overview">
+                    <div class="size-card highlight">
+                        <div class="size-number">12-14坪</div>
+                        <div class="size-sqm">約40-46㎡</div>
+                    </div>
+                </div>
+
+                <div class="equipment-grid">
+                    <div class="equipment-card">
+                        <div class="equipment-icon">🔄</div>
+                        <h3>洗濯乾燥機(大型)</h3>
+                        <p class="en">Large Washer-Dryer</p>
+                        <div class="quantity">× 2台</div>
+                    </div>
+                    <div class="equipment-card">
+                        <div class="equipment-icon">🌀</div>
+                        <h3>洗濯機(中型)</h3>
+                        <p class="en">Medium Washer</p>
+                        <div class="quantity">× 4台</div>
+                    </div>
+                    <div class="equipment-card">
+                        <div class="equipment-icon">💨</div>
+                        <h3>乾燥機</h3>
+                        <p class="en">Dryer</p>
+                        <div class="quantity">× 8台</div>
+                    </div>
+                    <div class="equipment-card">
+                        <div class="equipment-icon">💴</div>
+                        <h3>両替機</h3>
+                        <p class="en">Change Machine</p>
+                        <div class="quantity">× 1台</div>
+                    </div>
+                </div>
+
+                <div class="reasoning-box">
+                    <h3>📐 サイズ設定の根拠</h3>
+                    <p class="en-sub">Reasoning for Store Size</p>
+                    <ul class="reasoning-list">
+                        <li>
+                            <span class="icon">✓</span>
+                            <div>
+                                <strong>通路幅の確保</strong>
+                                <p>利用者のすれ違い・カート移動に最低80cm必要</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            <div>
+                                <strong>作業スペース</strong>
+                                <p>洗濯物の仕分け・折りたたみに2㎡程度必要</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">✓</span>
+                            <div>
+                                <strong>保守・清掃効率</strong>
+                                <p>機器裏側へのアクセス・日常清掃の動線確保</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- コネクター1 -->
+        <div class="section-connector">
+            <svg class="connector-arrow" viewBox="0 0 100 100">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#FFD700" />
+                    </marker>
+                </defs>
+                <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+            </svg>
+            <div class="connector-bubble">
+                この規模なら<br>初期投資は...
+            </div>
+        </div>
+
+        <!-- セクション2: 初期投資 -->
+        <section id="investment" class="content-section section-investment">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2>初期投資の目安</h2>
+                    <p class="section-subtitle">Initial Investment</p>
+                </div>
+
+                <div class="investment-breakdown">
+                    <div class="breakdown-item">
+                        <div class="breakdown-label">
+                            <span class="icon">⚙️</span>
+                            <div>
+                                <strong>機械設備</strong>
+                                <p class="en">Equipment</p>
+                            </div>
+                        </div>
+                        <div class="breakdown-bar">
+                            <div class="bar-fill" style="width: 60%;" data-amount="1,500万円"></div>
+                        </div>
+                        <div class="breakdown-amount">1,500万円</div>
+                    </div>
+
+                    <div class="breakdown-item">
+                        <div class="breakdown-label">
+                            <span class="icon">🏗️</span>
+                            <div>
+                                <strong>内装・工事</strong>
+                                <p class="en">Interior & Utilities</p>
+                            </div>
+                        </div>
+                        <div class="breakdown-bar">
+                            <div class="bar-fill" style="width: 32%;" data-amount="800万円"></div>
+                        </div>
+                        <div class="breakdown-amount">800万円</div>
+                    </div>
+
+                    <div class="breakdown-item">
+                        <div class="breakdown-label">
+                            <span class="icon">📋</span>
+                            <div>
+                                <strong>その他</strong>
+                                <p class="en">Others</p>
+                            </div>
+                        </div>
+                        <div class="breakdown-bar">
+                            <div class="bar-fill" style="width: 8%;" data-amount="200万円"></div>
+                        </div>
+                        <div class="breakdown-amount">200万円</div>
+                    </div>
+
+                    <div class="breakdown-total">
+                        <strong>合計</strong>
+                        <span class="total-amount">2,300-2,700万円</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- コネクター2 -->
+        <div class="section-connector">
+            <svg class="connector-arrow" viewBox="0 0 100 100">
+                <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+            </svg>
+            <div class="connector-bubble">
+                この投資額で<br>借りられる家賃は...
+            </div>
+        </div>
+
+        <!-- セクション3: 家賃 -->
+        <section id="rent" class="content-section section-rent">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2>想定家賃(大田区)</h2>
+                    <p class="section-subtitle">Estimated Rent (Ota-ku)</p>
+                </div>
+
+                <div class="rent-card">
+                    <div class="rent-amount">
+                        <span class="currency">¥</span>
+                        <span class="amount">150,000</span>
+                        <span class="unit">- 250,000</span>
+                        <span class="period">/月</span>
+                    </div>
+                    <p class="rent-note">
+                        ※ 1階路面店・駅徒歩10分圏内を想定<br>
+                        ※ 坪単価 12,000-18,000円程度
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- コネクター3 -->
+        <div class="section-connector">
+            <svg class="connector-arrow" viewBox="0 0 100 100">
+                <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+            </svg>
+            <div class="connector-bubble">
+                この条件で<br>融資は受けられる?
+            </div>
+        </div>
+
+        <!-- セクション4: 融資 -->
+        <section id="financing" class="content-section section-financing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2>融資の現実性</h2>
+                    <p class="section-subtitle">Financing Feasibility</p>
+                </div>
+
+                <div class="financing-flow">
+                    <div class="flow-step">
+                        <div class="step-icon">📝</div>
+                        <div class="step-content">
+                            <h3>事業計画書作成</h3>
+                            <p class="difficulty indie">個人:★★★ 難</p>
+                            <p class="difficulty fc">FC:★☆☆ テンプレあり</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-arrow">↓</div>
+                    
+                    <div class="flow-step">
+                        <div class="step-icon">🏦</div>
+                        <div class="step-content">
+                            <h3>金融機関審査</h3>
+                            <p class="difficulty indie">個人:日本政策金融公庫</p>
+                            <p class="difficulty fc">FC:公庫+提携金融機関</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-arrow">↓</div>
+                    
+                    <div class="flow-step">
+                        <div class="step-icon">🤝</div>
+                        <div class="step-content">
+                            <h3>面談・現地調査</h3>
+                            <p class="difficulty indie">個人:実績なしで説得必要</p>
+                            <p class="difficulty fc">FC:モデル実績で評価</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-arrow">↓</div>
+                    
+                    <div class="flow-step success">
+                        <div class="step-icon">✅</div>
+                        <div class="step-content">
+                            <h3>融資実行</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- コネクター4 -->
+        <div class="section-connector">
+            <svg class="connector-arrow" viewBox="0 0 100 100">
+                <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+            </svg>
+            <div class="connector-bubble">
+                融資を受けたら<br>何年で回収?
+            </div>
+        </div>
+
+        <!-- セクション5: 回収シミュレーション -->
+        <section id="payback" class="content-section section-payback">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2>5年回収シミュレーション</h2>
+                    <p class="section-subtitle">5-Year Payback Simulation</p>
+                </div>
+
+                <div class="simulation-warning">
+                    ⚠️ 超保守的試算(月間純利益5万円想定)
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-track">
+                        <div class="timeline-year" data-year="1">
+                            <div class="year-label">Year 1</div>
+                            <div class="year-amount">60万円</div>
+                            <div class="year-bar" style="height: 20%;"></div>
+                        </div>
+                        <div class="timeline-year" data-year="2">
+                            <div class="year-label">Year 2</div>
+                            <div class="year-amount">120万円</div>
+                            <div class="year-bar" style="height: 40%;"></div>
+                        </div>
+                        <div class="timeline-year" data-year="3">
+                            <div class="year-label">Year 3</div>
+                            <div class="year-amount">180万円</div>
+                            <div class="year-bar" style="height: 60%;"></div>
+                        </div>
+                        <div class="timeline-year" data-year="4">
+                            <div class="year-label">Year 4</div>
+                            <div class="year-amount">240万円</div>
+                            <div class="year-bar" style="height: 80%;"></div>
+                        </div>
+                        <div class="timeline-year" data-year="5">
+                            <div class="year-label">Year 5</div>
+                            <div class="year-amount">300万円</div>
+                            <div class="year-bar" style="height: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="simulation-note">
+                    <p>※ 初期投資2,500万円の場合、<strong>単店舗では回収困難</strong></p>
+                    <p>※ 複数店舗展開・効率化が前提</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- コネクター5(分岐) -->
+        <div class="section-connector fork">
+            <div class="fork-question">
+                どちらを選ぶ?
+            </div>
+            <svg class="connector-fork" viewBox="0 0 200 100">
+                <path d="M100 10 L100 40 M100 40 L50 80 M100 40 L150 80" 
+                      stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <!-- セクション6: 比較 -->
+        <section id="comparison" class="content-section section-comparison">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">06</span>
+                    <h2>開業形態の比較</h2>
+                    <p class="section-subtitle">Business Model Comparison</p>
+                </div>
+
+                <div class="comparison-grid">
+                    <!-- 個人開業 -->
+                    <div class="comparison-card indie-card">
+                        <div class="card-header">
+                            <h3>個人開業</h3>
+                            <p class="en">Independent</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>👍 メリット</h4>
+                            <ul>
+                                <li>初期費用を抑えやすい</li>
+                                <li>店舗設計の自由度が高い</li>
+                                <li>ロイヤリティ不要</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-section">
+                            <h4>👎 デメリット</h4>
+                            <ul>
+                                <li>全て自己判断・自己責任</li>
+                                <li>融資審査のハードル高</li>
+                                <li>ノウハウ蓄積に時間</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-footer">
+                            <strong>向いている人</strong>
+                            <p>コスト重視・試行錯誤を楽しめる</p>
+                        </div>
+                    </div>
+
+                    <!-- フランチャイズ -->
+                    <div class="comparison-card fc-card">
+                        <div class="card-header">
+                            <h3>フランチャイズ</h3>
+                            <p class="en">Franchise</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>👍 メリット</h4>
+                            <ul>
+                                <li>開業マニュアル完備</li>
+                                <li>融資が通りやすい</li>
+                                <li>集客・運営サポートあり</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-section">
+                            <h4>👎 デメリット</h4>
+                            <ul>
+                                <li>加盟金・ロイヤリティ負担</li>
+                                <li>本部ルールの制約</li>
+                                <li>総投資額が高くなりがち</li>
+                            </ul>
+                        </div>
+
+                        <div class="card-footer">
+                            <strong>向いている人</strong>
+                            <p>安心・サポート重視・早期立上げ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="conclusion-section">
+            <div class="container">
+                <div class="conclusion-card">
+                    <h2>💡 まとめ</h2>
+                    <p class="en">Conclusion</p>
+                    <div class="conclusion-points">
+                        <div class="point">
+                            <span class="icon">🎯</span>
+                            <p>小型店舗(12-14坪)は現実的な選択肢</p>
+                        </div>
+                        <div class="point">
+                            <span class="icon">💰</span>
+                            <p>初期投資2,500万円前後が目安</p>
+                        </div>
+                        <div class="point">
+                            <span class="icon">🏦</span>
+                            <p>融資は計画書の質と形態で大きく変わる</p>
+                        </div>
+                        <div class="point">
+                            <span class="icon">📈</span>
+                            <p>単店舗回収は困難→複数店舗展開が前提</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>本資料の最新版: <a href="https://28yu.github.io/coin/" target="_blank">https://28yu.github.io/coin/</a></p>
+            <p class="note">※ 数値は概算・保守的試算であり、実際の事業計画には個別の精査が必要です</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript読み込み -->
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
