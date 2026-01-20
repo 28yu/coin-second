@@ -21,7 +21,7 @@
     <div class="container header-container">
         <h1 class="site-title">コインランドリービジネス検討資料</h1>
         
-        <!-- 言語切り替えボタン(NEW) -->
+        <!-- 言語切り替えボタン -->
         <div class="language-switcher">
             <a href="index.html" class="lang-btn active" data-lang="ja" aria-label="日本語版を表示中">
                 <span class="flag">🇯🇵</span>
@@ -40,6 +40,7 @@
         </div>
         
         <nav class="progress-nav" id="progressNav">
+            <a href="#location-analysis" data-section="location-analysis">立地</a>
             <a href="#size" data-section="size">サイズ</a>
             <a href="#investment" data-section="investment">投資</a>
             <a href="#rent" data-section="rent">家賃</a>
@@ -56,18 +57,358 @@
         <section class="intro-section">
             <div class="container">
                 <div class="intro-card">
-                    <h2>📍 想定立地：東京都大田区</h2>
-                    <p class="subtitle">Location: Ota-ku, Tokyo</p>
+                    <h2>📍 想定立地：東京都大田区蒲田</h2>
+                    <p class="subtitle">Location: Kamata, Ota-ku, Tokyo</p>
                     <p>小型店舗モデルでの開業を前提に、個人開業とフランチャイズを比較します</p>
                 </div>
             </div>
         </section>
 
-        <!-- セクション1: 店舗サイズ -->
-        <section id="size" class="content-section section-size">
+        <!-- ============================================
+             コネクター: イントロ → 立地分析
+             ============================================ -->
+        <div class="section-connector">
+            <svg class="connector-arrow" viewBox="0 0 100 100">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#FFD700" />
+                    </marker>
+                </defs>
+                <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+            </svg>
+            <div class="connector-bubble">
+                なぜ大田区蒲田なのか？<br>立地選定の根拠を確認
+            </div>
+        </div>
+
+        <!-- ============================================
+             新規セクション: 立地分析（セクション01）
+             ============================================ -->
+        <section id="location-analysis" class="content-section fade-in">
             <div class="container">
                 <div class="section-header">
                     <span class="section-number">01</span>
+                    <h2>立地分析：なぜ大田区蒲田なのか？</h2>
+                    <p class="section-subtitle">Location Analysis: Why Kamata, Ota-ku?</p>
+                </div>
+                
+                <!-- 30秒エレベーターピッチ -->
+                <div class="card highlight-card">
+                    <div class="card-icon">💡</div>
+                    <div class="card-content">
+                        <h3>立地選定の結論</h3>
+                        <div class="speech-bubble">
+                            <p><strong>大田区蒲田を選んだ理由は3つです。</strong></p>
+                            <ol>
+                                <li><strong>運営効率</strong>: 自宅から近く、セルフメンテナンスで年間120万円、5年で600万円削減</li>
+                                <li><strong>初期コスト</strong>: 賃料が世田谷区比で月10万円安く、5年で600万円削減</li>
+                                <li><strong>需要の確実性</strong>: 半径500m圏に4,500世帯、単身世帯率50%</li>
+                            </ol>
+                            <p class="highlight-text">💰 合計1,200万円の差（初期投資の48%）= 投資回収期間を2年短縮</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 他区との比較 -->
+                <div class="card">
+                    <h3>🏘️ 大田区 vs 他区 比較分析</h3>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>大田区</th>
+                                    <th>世田谷区</th>
+                                    <th>江東区</th>
+                                    <th>品川区</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>人口</td>
+                                    <td>約72万人</td>
+                                    <td>約94万人</td>
+                                    <td>約53万人</td>
+                                    <td>約41万人</td>
+                                </tr>
+                                <tr>
+                                    <td>単身世帯率</td>
+                                    <td><strong>約48%</strong></td>
+                                    <td>約44%</td>
+                                    <td>約51%</td>
+                                    <td>約50%</td>
+                                </tr>
+                                <tr>
+                                    <td>店舗賃料(20坪)</td>
+                                    <td class="highlight-cell"><strong>15-25万円</strong></td>
+                                    <td>25-35万円</td>
+                                    <td>20-30万円</td>
+                                    <td>25-35万円</td>
+                                </tr>
+                                <tr>
+                                    <td>自宅からの距離</td>
+                                    <td class="highlight-cell"><strong>0km</strong></td>
+                                    <td>15km+</td>
+                                    <td>10km+</td>
+                                    <td>5km+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="note">※ 賃料差で5年間600万円、運営コスト削減で5年間600万円の差が生まれる</p>
+                </div>
+
+                <!-- 投資判断マトリクス -->
+                <div class="card">
+                    <h3>📊 投資判断マトリクス</h3>
+                    <div class="matrix-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>評価軸</th>
+                                    <th>重要度</th>
+                                    <th>大田区</th>
+                                    <th>世田谷区</th>
+                                    <th>江東区</th>
+                                    <th>品川区</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>運営効率</td>
+                                    <td>×3</td>
+                                    <td class="score-high">◎ 9点</td>
+                                    <td class="score-low">× 0点</td>
+                                    <td class="score-low">× 0点</td>
+                                    <td class="score-mid">△ 3点</td>
+                                </tr>
+                                <tr>
+                                    <td>初期コスト</td>
+                                    <td>×3</td>
+                                    <td class="score-high">◎ 9点</td>
+                                    <td class="score-low">△ 3点</td>
+                                    <td class="score-mid">○ 6点</td>
+                                    <td class="score-low">△ 3点</td>
+                                </tr>
+                                <tr>
+                                    <td>需要ポテンシャル</td>
+                                    <td>×2</td>
+                                    <td class="score-mid">○ 6点</td>
+                                    <td class="score-high">◎ 8点</td>
+                                    <td class="score-high">◎ 8点</td>
+                                    <td class="score-mid">○ 6点</td>
+                                </tr>
+                                <tr>
+                                    <td>競合状況</td>
+                                    <td>×2</td>
+                                    <td class="score-mid">○ 6点</td>
+                                    <td class="score-low">△ 4点</td>
+                                    <td class="score-low">△ 4点</td>
+                                    <td class="score-mid">○ 6点</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="2"><strong>合計スコア</strong></td>
+                                    <td class="score-total"><strong>30点</strong></td>
+                                    <td>15点</td>
+                                    <td>18点</td>
+                                    <td>18点</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="insight-box">
+                        <p><strong>💡 Key Insight:</strong> 需要規模では劣るが、<strong>利益率で逆転</strong>するモデル</p>
+                    </div>
+                </div>
+
+                <!-- 蒲田エリア詳細 -->
+                <div class="card">
+                    <h3>🎯 蒲田区役所周辺エリアの詳細</h3>
+                    
+                    <div class="area-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">👥</div>
+                            <div class="detail-content">
+                                <h4>人口・世帯データ</h4>
+                                <ul>
+                                    <li>半径500m圏: 約4,500世帯（推定）<span class="note-tag">*要最新情報調査</span></li>
+                                    <li>単身世帯率: 約50%（大田区平均48%）</li>
+                                    <li>潜在顧客: 約450世帯</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon">🏪</div>
+                            <div class="detail-content">
+                                <h4>競合状況</h4>
+                                <ul>
+                                    <li>半径500m圏: 1店舗（推定）<span class="note-tag">*要現地調査</span></li>
+                                    <li>最寄り競合: 約300m</li>
+                                    <li>戦略: 清潔さ・新型設備で差別化</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon">💰</div>
+                            <div class="detail-content">
+                                <h4>賃料相場</h4>
+                                <ul>
+                                    <li>想定賃料: <strong>月額20万円</strong>（17坪）</li>
+                                    <li>坪単価: 約1.2万円<span class="note-tag">*要最新情報調査</span></li>
+                                    <li>条件: 1階路面店、駅徒歩8-12分</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 適地条件の検証 -->
+                <div class="card">
+                    <h3>✅ コインランドリー適地条件の検証</h3>
+                    <div class="checklist">
+                        <div class="check-item check-pass">
+                            <span class="check-icon">✅</span>
+                            <div class="check-content">
+                                <strong>駅からの距離</strong>
+                                <p>理想: 徒歩5-15分 → 実際: 徒歩8-12分（推定）</p>
+                            </div>
+                        </div>
+                        <div class="check-item check-pass">
+                            <span class="check-icon">✅</span>
+                            <div class="check-content">
+                                <strong>住宅密集度</strong>
+                                <p>理想: 500m圏に500世帯以上 → 実際: 4,500世帯（推定）</p>
+                            </div>
+                        </div>
+                        <div class="check-item check-pass">
+                            <span class="check-icon">✅</span>
+                            <div class="check-content">
+                                <strong>単身世帯率</strong>
+                                <p>理想: 40%以上 → 実際: 50%（推定）</p>
+                            </div>
+                        </div>
+                        <div class="check-item check-pass">
+                            <span class="check-icon">✅</span>
+                            <div class="check-content">
+                                <strong>競合密度</strong>
+                                <p>理想: 500mに2店舗以下 → 実際: 1店舗（推定）</p>
+                            </div>
+                        </div>
+                        <div class="check-item check-caution">
+                            <span class="check-icon">⚠️</span>
+                            <div class="check-content">
+                                <strong>駐車場</strong>
+                                <p>理想: あれば◎ → 実際: 近隣コインP利用想定</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="conclusion-text">
+                        <strong>総合判定: ✅ 適地条件を概ね満たす</strong>
+                    </p>
+                </div>
+
+                <!-- 論理構造 -->
+                <div class="card logic-tree">
+                    <h3>🎯 選定ロジック（投資家向け説明用）</h3>
+                    <div class="tree-structure">
+                        <div class="tree-root">
+                            <strong>大田区蒲田を選ぶべき理由</strong>
+                        </div>
+                        <div class="tree-branches">
+                            <div class="tree-branch">
+                                <div class="branch-title">経済合理性（定量）</div>
+                                <ul>
+                                    <li>運営コスト: -600万円/5年</li>
+                                    <li>賃料コスト: -600万円/5年</li>
+                                    <li><strong>合計: -1,200万円/5年</strong></li>
+                                    <li class="highlight-text">= 初期投資の48%</li>
+                                </ul>
+                            </div>
+                            <div class="tree-branch">
+                                <div class="branch-title">需要の確実性（定量）</div>
+                                <ul>
+                                    <li>人口密度: 4,500世帯/500m圏</li>
+                                    <li>単身世帯率: 50%</li>
+                                    <li><strong>潜在顧客: 450世帯</strong></li>
+                                </ul>
+                            </div>
+                            <div class="tree-branch">
+                                <div class="branch-title">リスク管理（定性）</div>
+                                <ul>
+                                    <li>緊急対応: 30分以内</li>
+                                    <li>顧客接点: 地元密着</li>
+                                    <li><strong>精神的負担の軽減</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 要確認事項 -->
+                <div class="card caution-card">
+                    <div class="card-icon">⚠️</div>
+                    <div class="card-content">
+                        <h3>今後の確認事項</h3>
+                        <table class="task-table">
+                            <thead>
+                                <tr>
+                                    <th>項目</th>
+                                    <th>調査方法</th>
+                                    <th>優先度</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>競合店舗の実態</td>
+                                    <td>現地訪問・時間帯別観察</td>
+                                    <td><span class="priority-high">A</span></td>
+                                </tr>
+                                <tr>
+                                    <td>賃料相場</td>
+                                    <td>不動産屋3社ヒアリング</td>
+                                    <td><span class="priority-high">A</span></td>
+                                </tr>
+                                <tr>
+                                    <td>人口統計</td>
+                                    <td>大田区統計書・国勢調査</td>
+                                    <td><span class="priority-high">A</span></td>
+                                </tr>
+                                <tr>
+                                    <td>物件条件</td>
+                                    <td>内見3件以上</td>
+                                    <td><span class="priority-high">A</span></td>
+                                </tr>
+                                <tr>
+                                    <td>周辺環境</td>
+                                    <td>現地調査（人通り等）</td>
+                                    <td><span class="priority-medium">B</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             コネクター: 立地分析 → 店舗サイズ
+             ============================================ -->
+        <div class="section-connector">
+            <svg class="connector-arrow" viewBox="0 0 100 100">
+                <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+            </svg>
+            <div class="connector-bubble">
+                立地が確定したら<br>次は店舗サイズを決定
+            </div>
+        </div>
+
+        <!-- セクション2: 店舗サイズ -->
+        <section id="size" class="content-section section-size">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
                     <h2>想定する店舗サイズ</h2>
                     <p class="section-subtitle">Assumed Store Size</p>
                 </div>
@@ -136,14 +477,9 @@
             </div>
         </section>
 
-        <!-- コネクター1 -->
+        <!-- コネクター2 -->
         <div class="section-connector">
             <svg class="connector-arrow" viewBox="0 0 100 100">
-                <defs>
-                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-                        <polygon points="0 0, 10 3, 0 6" fill="#FFD700" />
-                    </marker>
-                </defs>
                 <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
             </svg>
             <div class="connector-bubble">
@@ -151,11 +487,11 @@
             </div>
         </div>
 
-        <!-- セクション2: 初期投資 -->
+        <!-- セクション3: 初期投資 -->
         <section id="investment" class="content-section section-investment">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-number">02</span>
+                    <span class="section-number">03</span>
                     <h2>初期投資の目安</h2>
                     <p class="section-subtitle">Initial Investment</p>
                 </div>
@@ -211,7 +547,7 @@
             </div>
         </section>
 
-        <!-- コネクター2 -->
+        <!-- コネクター3 -->
         <div class="section-connector">
             <svg class="connector-arrow" viewBox="0 0 100 100">
                 <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
@@ -221,31 +557,30 @@
             </div>
         </div>
 
-        <!-- セクション3: 家賃 -->
+        <!-- セクション4: 家賃 -->
         <section id="rent" class="content-section section-rent">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-number">03</span>
-                    <h2>想定家賃(大田区)</h2>
-                    <p class="section-subtitle">Estimated Rent (Ota-ku)</p>
+                    <span class="section-number">04</span>
+                    <h2>想定家賃(大田区蒲田)</h2>
+                    <p class="section-subtitle">Estimated Rent (Kamata, Ota-ku)</p>
                 </div>
 
                 <div class="rent-card">
                     <div class="rent-amount">
                         <span class="currency">¥</span>
-                        <span class="amount">150,000</span>
-                        <span class="unit">- 250,000</span>
+                        <span class="amount">200,000</span>
                         <span class="period">/月</span>
                     </div>
                     <p class="rent-note">
-                        ※ 1階路面店・駅徒歩10分圏内を想定<br>
-                        ※ 坪単価 12,000-18,000円程度
+                        ※ 1階路面店・17坪・駅徒歩8-12分を想定<br>
+                        ※ 坪単価 約12,000円
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- コネクター3 -->
+        <!-- コネクター4 -->
         <div class="section-connector">
             <svg class="connector-arrow" viewBox="0 0 100 100">
                 <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
@@ -255,11 +590,11 @@
             </div>
         </div>
 
-        <!-- セクション4: 融資 -->
+        <!-- セクション5: 融資 -->
         <section id="financing" class="content-section section-financing">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-number">04</span>
+                    <span class="section-number">05</span>
                     <h2>融資の現実性</h2>
                     <p class="section-subtitle">Financing Feasibility</p>
                 </div>
@@ -308,7 +643,7 @@
             </div>
         </section>
 
-        <!-- コネクター4 -->
+        <!-- コネクター5 -->
         <div class="section-connector">
             <svg class="connector-arrow" viewBox="0 0 100 100">
                 <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
@@ -318,11 +653,11 @@
             </div>
         </div>
 
-        <!-- セクション5: 回収シミュレーション -->
+        <!-- セクション6: 回収シミュレーション -->
         <section id="payback" class="content-section section-payback">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-number">05</span>
+                    <span class="section-number">06</span>
                     <h2>5年回収シミュレーション</h2>
                     <p class="section-subtitle">5-Year Payback Simulation</p>
                 </div>
@@ -368,7 +703,7 @@
             </div>
         </section>
 
-        <!-- コネクター5(分岐) -->
+        <!-- コネクター6(分岐) -->
         <div class="section-connector fork">
             <div class="fork-question">
                 どちらを選ぶ?
@@ -379,11 +714,11 @@
             </svg>
         </div>
 
-        <!-- セクション6: 比較 -->
+        <!-- セクション7: 比較 -->
         <section id="comparison" class="content-section section-comparison">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-number">06</span>
+                    <span class="section-number">07</span>
                     <h2>開業形態の比較</h2>
                     <p class="section-subtitle">Business Model Comparison</p>
                 </div>
@@ -462,6 +797,10 @@
                     <p class="en">Conclusion</p>
                     <div class="conclusion-points">
                         <div class="point">
+                            <span class="icon">📍</span>
+                            <p>大田区蒲田は運営効率で5年1,200万円の差</p>
+                        </div>
+                        <div class="point">
                             <span class="icon">🎯</span>
                             <p>小型店舗(12-14坪)は現実的な選択肢</p>
                         </div>
@@ -486,7 +825,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>本資料の最新版: <a href="https://28yu.github.io/coin/" target="_blank">https://28yu.github.io/coin/</a></p>
+            <p>本資料の最新版: <a href="https://28yu.github.io/coin-second/" target="_blank">https://28yu.github.io/coin-second/</a></p>
             <p class="note">※ 数値は概算・保守的試算であり、実際の事業計画には個別の精査が必要です</p>
         </div>
     </footer>
