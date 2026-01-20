@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.progress-nav a');
     const sections = document.querySelectorAll('.content-section');
     
+// ★追加: イントロセクションも監視対象に
+const allSections = document.querySelectorAll('section[id]');
     
     // ========================================
     // プログレスバー更新
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateActiveSection() {
         const scrollPosition = window.scrollY + 150; // ヘッダー高さ考慮
         
-        sections.forEach(section => {
+        allsections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
