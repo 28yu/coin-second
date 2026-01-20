@@ -5,422 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>コインランドリービジネス比較資料 | Laundromat Business Guide</title>
     
-    <!-- CSS読み込み(順序重要) -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/sections.css">
     
-    <!-- 立地分析セクション用のインラインCSS（緊急対応） -->
     <style>
-        /* 立地分析セクションの基本スタイル */
-        #location-analysis {
-            padding: 4rem 0;
-            background: #ffffff;
-        }
-
-        #location-analysis .card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border: 2px solid #e0e0e0;
-        }
-
-        #location-analysis .card h3 {
-            color: #2C3E50;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #FFD700;
-            font-size: 1.3rem;
-        }
-
-        .highlight-card {
-            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%) !important;
-            border: 3px solid #FFD700 !important;
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .speech-bubble {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 5px solid #FFD700;
-            margin-top: 1rem;
-        }
-
-        .speech-bubble ol {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
-        }
-
-        .speech-bubble li {
-            margin: 0.75rem 0;
-            line-height: 1.8;
-        }
-
-        .highlight-text {
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            padding: 0.75rem 1rem;
-            border-radius: 12px;
-            font-weight: 600;
-            text-align: center;
-            margin-top: 1rem;
-            border: 2px solid #E67E22;
-            display: block;
-        }
-
-        .comparison-table {
-            overflow-x: auto;
-            margin: 1.5rem 0;
-        }
-
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-
-        .comparison-table thead {
-            background: #2C3E50;
-            color: white;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 0.9rem 0.75rem;
-            border: 1px solid #e0e0e0;
-            text-align: left;
-        }
-
-        .comparison-table tbody tr:nth-child(even) {
-            background: #F8F9FA;
-        }
-
-        .highlight-cell {
-            background: linear-gradient(135deg, #fff9e6 0%, #ffe066 50%) !important;
-            font-weight: 600;
-        }
-
-        #location-analysis .note {
-            margin-top: 1rem;
-            padding: 0.75rem;
-            background: #F8F9FA;
-            border-left: 4px solid #3498DB;
-            font-size: 0.85rem;
-            color: #666;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .matrix-table {
-            overflow-x: auto;
-            margin: 1.5rem 0;
-        }
-
-        .matrix-table table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-
-        .matrix-table th,
-        .matrix-table td {
-            padding: 0.8rem;
-            text-align: center;
-            border: 1px solid #e0e0e0;
-        }
-
-        .matrix-table th {
-            background: #2C3E50;
-            color: white;
-        }
-
-        .score-high {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            color: #155724;
-            font-weight: 600;
-            border: 2px solid #28a745 !important;
-        }
-
-        .score-mid {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            color: #856404;
-            font-weight: 600;
-        }
-
-        .score-low {
-            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
-            color: #721c24;
-            font-weight: 600;
-        }
-
-        .score-total {
-            background: linear-gradient(135deg, #FFD700 0%, #ffed4e 100%);
-            color: #2C3E50;
-            font-weight: 700;
-            font-size: 1.2rem;
-            border: 3px solid #E67E22 !important;
-        }
-
-        .insight-box {
-            margin-top: 1.5rem;
-            padding: 1.25rem;
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-left: 5px solid #3498DB;
-            border-radius: 12px;
-        }
-
-        .area-details {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .detail-item {
-            display: flex;
-            gap: 1.25rem;
-            padding: 1.5rem;
-            background: #F8F9FA;
-            border-radius: 12px;
-            border-left: 5px solid #FFD700;
-        }
-
-        .detail-icon {
-            font-size: 2.5rem;
-            flex-shrink: 0;
-        }
-
-        .detail-content h4 {
-            margin: 0 0 0.75rem 0;
-            color: #2C3E50;
-        }
-
-        .detail-content ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .detail-content li {
-            margin: 0.5rem 0;
-            padding-left: 1rem;
-            position: relative;
-        }
-
-        .detail-content li::before {
-            content: '✓';
-            position: absolute;
-            left: -0.5rem;
-            color: #FFD700;
-            font-weight: bold;
-        }
-
-        .note-tag {
-            display: inline-block;
-            margin-left: 0.5rem;
-            padding: 0.15rem 0.5rem;
-            background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
-            color: white;
-            font-size: 0.7rem;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .checklist {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .check-item {
-            display: flex;
-            gap: 1rem;
-            padding: 1.25rem;
-            border-radius: 12px;
-        }
-
-        .check-pass {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            border-left: 5px solid #28a745;
-        }
-
-        .check-caution {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border-left: 5px solid #ffc107;
-        }
-
-        .check-icon {
-            font-size: 1.8rem;
-            flex-shrink: 0;
-        }
-
-        .check-content strong {
-            display: block;
-            margin-bottom: 0.4rem;
-            color: #2C3E50;
-        }
-
-        .conclusion-text {
-            margin-top: 1.5rem;
-            padding: 1.25rem;
-            background: linear-gradient(135deg, #FFD700 0%, #ffed4e 100%);
-            text-align: center;
-            border-radius: 12px;
-            font-size: 1.15rem;
-            border: 3px solid #E67E22;
-        }
-
-        .logic-tree {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border: 2px solid #e0e0e0 !important;
-        }
-
-        .tree-structure {
-            margin-top: 1.5rem;
-        }
-
-        .tree-root {
-            padding: 1.25rem;
-            background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%);
-            color: white;
-            text-align: center;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .tree-root::after {
-            content: '';
-            position: absolute;
-            bottom: -1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 3px;
-            height: 1.5rem;
-            background: #FFD700;
-        }
-
-        .tree-branches {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .tree-branch {
-            padding: 1.5rem;
-            background: white;
-            border-radius: 12px;
-            border: 2px solid #e0e0e0;
-        }
-
-        .branch-title {
-            font-weight: 600;
-            color: #2C3E50;
-            margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 3px solid #FFD700;
-        }
-
-        .tree-branch ul {
-            list-style: none;
-            padding-left: 1.3rem;
-        }
-
-        .tree-branch li::before {
-            content: '▸';
-            position: absolute;
-            left: -0.5rem;
-            color: #FFD700;
-        }
-
-        .caution-card {
-            background: linear-gradient(135deg, #fff9e6 0%, #ffeaa7 100%) !important;
-            border: 3px solid #ffc107 !important;
-        }
-
-        .task-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-            background: white;
-        }
-
-        .task-table th,
-        .task-table td {
-            padding: 0.9rem;
-            text-align: left;
-            border: 1px solid #e0e0e0;
-        }
-
-        .task-table th {
-            background: #F8F9FA;
-            font-weight: 600;
-        }
-
-        .priority-high,
-        .priority-medium {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-
-        .priority-high {
-            background: #dc3545;
-            color: white;
-        }
-
-        .priority-medium {
-            background: #ffc107;
-            color: #2C3E50;
-        }
-
-        @media (max-width: 768px) {
-            .tree-branches {
-                grid-template-columns: 1fr;
-            }
-            .detail-item {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+        #location-analysis { padding: 4rem 0; background: #ffffff; }
+        #location-analysis .card { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 2px solid #e0e0e0; }
+        #location-analysis .card h3 { color: #2C3E50; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #FFD700; font-size: 1.3rem; }
+        .highlight-card { background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%) !important; border: 3px solid #FFD700 !important; }
+        .card-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+        .speech-bubble { background: white; padding: 1.5rem; border-radius: 12px; border-left: 5px solid #FFD700; margin-top: 1rem; }
+        .speech-bubble ol { margin: 1rem 0; padding-left: 1.5rem; }
+        .speech-bubble li { margin: 0.75rem 0; line-height: 1.8; }
+        .highlight-text { background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); padding: 0.75rem 1rem; border-radius: 12px; font-weight: 600; text-align: center; margin-top: 1rem; border: 2px solid #E67E22; display: block; }
+        .comparison-table { overflow-x: auto; margin: 1.5rem 0; }
+        .comparison-table table { width: 100%; border-collapse: collapse; background: white; }
+        .comparison-table thead { background: #2C3E50; color: white; }
+        .comparison-table th, .comparison-table td { padding: 0.9rem 0.75rem; border: 1px solid #e0e0e0; text-align: left; }
+        .comparison-table tbody tr:nth-child(even) { background: #F8F9FA; }
+        .highlight-cell { background: linear-gradient(135deg, #fff9e6 0%, #ffe066 50%) !important; font-weight: 600; }
+        #location-analysis .note { margin-top: 1rem; padding: 0.75rem; background: #F8F9FA; border-left: 4px solid #3498DB; font-size: 0.85rem; color: #666; border-radius: 0 12px 12px 0; }
+        .matrix-table { overflow-x: auto; margin: 1.5rem 0; }
+        .matrix-table table { width: 100%; border-collapse: collapse; background: white; }
+        .matrix-table th, .matrix-table td { padding: 0.8rem; text-align: center; border: 1px solid #e0e0e0; }
+        .matrix-table th { background: #2C3E50; color: white; }
+        .score-high { background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); color: #155724; font-weight: 600; border: 2px solid #28a745 !important; }
+        .score-mid { background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); color: #856404; font-weight: 600; }
+        .score-low { background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); color: #721c24; font-weight: 600; }
+        .score-total { background: linear-gradient(135deg, #FFD700 0%, #ffed4e 100%); color: #2C3E50; font-weight: 700; font-size: 1.2rem; border: 3px solid #E67E22 !important; }
+        .insight-box { margin-top: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 5px solid #3498DB; border-radius: 12px; }
+        .area-details { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+        .detail-item { display: flex; gap: 1.25rem; padding: 1.5rem; background: #F8F9FA; border-radius: 12px; border-left: 5px solid #FFD700; }
+        .detail-icon { font-size: 2.5rem; flex-shrink: 0; }
+        .detail-content h4 { margin: 0 0 0.75rem 0; color: #2C3E50; }
+        .detail-content ul { list-style: none; padding-left: 0; }
+        .detail-content li { margin: 0.5rem 0; padding-left: 1rem; position: relative; }
+        .detail-content li::before { content: '✓'; position: absolute; left: -0.5rem; color: #FFD700; font-weight: bold; }
+        .note-tag { display: inline-block; margin-left: 0.5rem; padding: 0.15rem 0.5rem; background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%); color: white; font-size: 0.7rem; border-radius: 4px; font-weight: 600; }
+        .checklist { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
+        .check-item { display: flex; gap: 1rem; padding: 1.25rem; border-radius: 12px; }
+        .check-pass { background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); border-left: 5px solid #28a745; }
+        .check-caution { background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); border-left: 5px solid #ffc107; }
+        .check-icon { font-size: 1.8rem; flex-shrink: 0; }
+        .check-content strong { display: block; margin-bottom: 0.4rem; color: #2C3E50; }
+        .conclusion-text { margin-top: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, #FFD700 0%, #ffed4e 100%); text-align: center; border-radius: 12px; font-size: 1.15rem; border: 3px solid #E67E22; }
+        .logic-tree { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border: 2px solid #e0e0e0 !important; }
+        .tree-structure { margin-top: 1.5rem; }
+        .tree-root { padding: 1.25rem; background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%); color: white; text-align: center; border-radius: 12px; margin-bottom: 2rem; position: relative; }
+        .tree-root::after { content: ''; position: absolute; bottom: -1.5rem; left: 50%; transform: translateX(-50%); width: 3px; height: 1.5rem; background: #FFD700; }
+        .tree-branches { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .tree-branch { padding: 1.5rem; background: white; border-radius: 12px; border: 2px solid #e0e0e0; }
+        .branch-title { font-weight: 600; color: #2C3E50; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 3px solid #FFD700; }
+        .tree-branch ul { list-style: none; padding-left: 1.3rem; }
+        .tree-branch li { position: relative; }
+        .tree-branch li::before { content: '▸'; position: absolute; left: -0.5rem; color: #FFD700; }
+        .caution-card { background: linear-gradient(135deg, #fff9e6 0%, #ffeaa7 100%) !important; border: 3px solid #ffc107 !important; }
+        .task-table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: white; }
+        .task-table th, .task-table td { padding: 0.9rem; text-align: left; border: 1px solid #e0e0e0; }
+        .task-table th { background: #F8F9FA; font-weight: 600; }
+        .priority-high, .priority-medium { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; }
+        .priority-high { background: #dc3545; color: white; }
+        .priority-medium { background: #ffc107; color: #2C3E50; }
+        @media (max-width: 768px) { .tree-branches { grid-template-columns: 1fr; } .detail-item { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
-    
-    <!-- プログレスバー -->
     <div id="progress-bar"></div>
     
-    <!-- ヘッダーナビゲーション -->
     <header class="site-header">
         <div class="container header-container">
             <h1 class="site-title">コインランドリービジネス検討資料</h1>
-            
-            <!-- 言語切り替えボタン -->
             <div class="language-switcher">
-                <a href="index.html" class="lang-btn active" data-lang="ja" aria-label="日本語版を表示中">
-                    <span class="flag">🇯🇵</span>
-                    <span class="lang-text">日本語</span>
-                </a>
-                <a href="#" class="lang-btn disabled" data-lang="en" 
-                   title="English version coming soon" 
-                   aria-label="英語版は準備中です">
-                    <span class="flag">🇬🇧</span>
-                    <span class="lang-text">English</span>
-                    <span class="badge">
-                        <span class="badge-icon">🚧</span>
-                        <span class="badge-text">Coming Soon</span>
-                    </span>
-                </a>
+                <a href="index.html" class="lang-btn active" data-lang="ja"><span class="flag">🇯🇵</span><span class="lang-text">日本語</span></a>
+                <a href="#" class="lang-btn disabled" data-lang="en" title="English version coming soon"><span class="flag">🇬🇧</span><span class="lang-text">English</span><span class="badge"><span class="badge-icon">🚧</span><span class="badge-text">Coming Soon</span></span></a>
             </div>
-            
             <nav class="progress-nav" id="progressNav">
                 <a href="#location-analysis" data-section="location-analysis">立地</a>
                 <a href="#size" data-section="size">サイズ</a>
@@ -434,8 +94,6 @@
     </header>
 
     <main class="main-content">
-        
-        <!-- イントロ -->
         <section class="intro-section">
             <div class="container">
                 <div class="intro-card">
@@ -446,22 +104,14 @@
             </div>
         </section>
 
-        <!-- コネクター: イントロ → 立地分析 -->
         <div class="section-connector">
             <svg class="connector-arrow" viewBox="0 0 100 100">
-                <defs>
-                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-                        <polygon points="0 0, 10 3, 0 6" fill="#FFD700" />
-                    </marker>
-                </defs>
+                <defs><marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#FFD700" /></marker></defs>
                 <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
             </svg>
-            <div class="connector-bubble">
-                なぜ大田区蒲田なのか？<br>立地選定の根拠を確認
-            </div>
+            <div class="connector-bubble">なぜ大田区蒲田なのか？<br>立地選定の根拠を確認</div>
         </div>
 
-        <!-- 立地分析セクション（01） -->
         <section id="location-analysis" class="content-section fade-in">
             <div class="container">
                 <div class="section-header">
@@ -470,7 +120,6 @@
                     <p class="section-subtitle">Location Analysis: Why Kamata, Ota-ku?</p>
                 </div>
                 
-                <!-- 30秒エレベーターピッチ -->
                 <div class="card highlight-card">
                     <div class="card-icon">💡</div>
                     <div class="card-content">
@@ -487,122 +136,41 @@
                     </div>
                 </div>
 
-                <!-- 他区との比較 -->
                 <div class="card">
                     <h3>🏘️ 大田区 vs 他区 比較分析</h3>
                     <div class="comparison-table">
                         <table>
-                            <thead>
-                                <tr>
-                                    <th>項目</th>
-                                    <th>大田区</th>
-                                    <th>世田谷区</th>
-                                    <th>江東区</th>
-                                    <th>品川区</th>
-                                </tr>
-                            </thead>
+                            <thead><tr><th>項目</th><th>大田区</th><th>世田谷区</th><th>江東区</th><th>品川区</th></tr></thead>
                             <tbody>
-                                <tr>
-                                    <td>人口</td>
-                                    <td>約72万人</td>
-                                    <td>約94万人</td>
-                                    <td>約53万人</td>
-                                    <td>約41万人</td>
-                                </tr>
-                                <tr>
-                                    <td>単身世帯率</td>
-                                    <td><strong>約48%</strong></td>
-                                    <td>約44%</td>
-                                    <td>約51%</td>
-                                    <td>約50%</td>
-                                </tr>
-                                <tr>
-                                    <td>店舗賃料(20坪)</td>
-                                    <td class="highlight-cell"><strong>15-25万円</strong></td>
-                                    <td>25-35万円</td>
-                                    <td>20-30万円</td>
-                                    <td>25-35万円</td>
-                                </tr>
-                                <tr>
-                                    <td>自宅からの距離</td>
-                                    <td class="highlight-cell"><strong>0km</strong></td>
-                                    <td>15km+</td>
-                                    <td>10km+</td>
-                                    <td>5km+</td>
-                                </tr>
+                                <tr><td>人口</td><td>約72万人</td><td>約94万人</td><td>約53万人</td><td>約41万人</td></tr>
+                                <tr><td>単身世帯率</td><td><strong>約48%</strong></td><td>約44%</td><td>約51%</td><td>約50%</td></tr>
+                                <tr><td>店舗賃料(20坪)</td><td class="highlight-cell"><strong>15-25万円</strong></td><td>25-35万円</td><td>20-30万円</td><td>25-35万円</td></tr>
+                                <tr><td>自宅からの距離</td><td class="highlight-cell"><strong>0km</strong></td><td>15km+</td><td>10km+</td><td>5km+</td></tr>
                             </tbody>
                         </table>
                     </div>
                     <p class="note">※ 賃料差で5年間600万円、運営コスト削減で5年間600万円の差が生まれる</p>
                 </div>
 
-                <!-- 投資判断マトリクス -->
                 <div class="card">
                     <h3>📊 投資判断マトリクス</h3>
                     <div class="matrix-table">
                         <table>
-                            <thead>
-                                <tr>
-                                    <th>評価軸</th>
-                                    <th>重要度</th>
-                                    <th>大田区</th>
-                                    <th>世田谷区</th>
-                                    <th>江東区</th>
-                                    <th>品川区</th>
-                                </tr>
-                            </thead>
+                            <thead><tr><th>評価軸</th><th>重要度</th><th>大田区</th><th>世田谷区</th><th>江東区</th><th>品川区</th></tr></thead>
                             <tbody>
-                                <tr>
-                                    <td>運営効率</td>
-                                    <td>×3</td>
-                                    <td class="score-high">◎ 9点</td>
-                                    <td class="score-low">× 0点</td>
-                                    <td class="score-low">× 0点</td>
-                                    <td class="score-mid">△ 3点</td>
-                                </tr>
-                                <tr>
-                                    <td>初期コスト</td>
-                                    <td>×3</td>
-                                    <td class="score-high">◎ 9点</td>
-                                    <td class="score-low">△ 3点</td>
-                                    <td class="score-mid">○ 6点</td>
-                                    <td class="score-low">△ 3点</td>
-                                </tr>
-                                <tr>
-                                    <td>需要ポテンシャル</td>
-                                    <td>×2</td>
-                                    <td class="score-mid">○ 6点</td>
-                                    <td class="score-high">◎ 8点</td>
-                                    <td class="score-high">◎ 8点</td>
-                                    <td class="score-mid">○ 6点</td>
-                                </tr>
-                                <tr>
-                                    <td>競合状況</td>
-                                    <td>×2</td>
-                                    <td class="score-mid">○ 6点</td>
-                                    <td class="score-low">△ 4点</td>
-                                    <td class="score-low">△ 4点</td>
-                                    <td class="score-mid">○ 6点</td>
-                                </tr>
-                                <tr class="total-row">
-                                    <td colspan="2"><strong>合計スコア</strong></td>
-                                    <td class="score-total"><strong>30点</strong></td>
-                                    <td>15点</td>
-                                    <td>18点</td>
-                                    <td>18点</td>
-                                </tr>
+                                <tr><td>運営効率</td><td>×3</td><td class="score-high">◎ 9点</td><td class="score-low">× 0点</td><td class="score-low">× 0点</td><td class="score-mid">△ 3点</td></tr>
+                                <tr><td>初期コスト</td><td>×3</td><td class="score-high">◎ 9点</td><td class="score-low">△ 3点</td><td class="score-mid">○ 6点</td><td class="score-low">△ 3点</td></tr>
+                                <tr><td>需要ポテンシャル</td><td>×2</td><td class="score-mid">○ 6点</td><td class="score-high">◎ 8点</td><td class="score-high">◎ 8点</td><td class="score-mid">○ 6点</td></tr>
+                                <tr><td>競合状況</td><td>×2</td><td class="score-mid">○ 6点</td><td class="score-low">△ 4点</td><td class="score-low">△ 4点</td><td class="score-mid">○ 6点</td></tr>
+                                <tr class="total-row"><td colspan="2"><strong>合計スコア</strong></td><td class="score-total"><strong>30点</strong></td><td>15点</td><td>18点</td><td>18点</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="insight-box">
-                        <p><strong>💡 Key Insight:</strong> 需要規模では劣るが、<strong>利益率で逆転</strong>するモデル</p>
-                    </div>
+                    <div class="insight-box"><p><strong>💡 Key Insight:</strong> 需要規模では劣るが、<strong>利益率で逆転</strong>するモデル</p></div>
                 </div>
 
-                <!-- 蒲田エリア詳細 -->
                 <div class="card">
                     <h3>🎯 蒲田区役所周辺エリアの詳細</h3>
-                    
                     <div class="area-details">
                         <div class="detail-item">
                             <div class="detail-icon">👥</div>
@@ -615,7 +183,6 @@
                                 </ul>
                             </div>
                         </div>
-
                         <div class="detail-item">
                             <div class="detail-icon">🏪</div>
                             <div class="detail-content">
@@ -627,7 +194,6 @@
                                 </ul>
                             </div>
                         </div>
-
                         <div class="detail-item">
                             <div class="detail-icon">💰</div>
                             <div class="detail-content">
@@ -642,127 +208,42 @@
                     </div>
                 </div>
 
-                <!-- 適地条件の検証 -->
                 <div class="card">
                     <h3>✅ コインランドリー適地条件の検証</h3>
                     <div class="checklist">
-                        <div class="check-item check-pass">
-                            <span class="check-icon">✅</span>
-                            <div class="check-content">
-                                <strong>駅からの距離</strong>
-                                <p>理想: 徒歩5-15分 → 実際: 徒歩8-12分（推定）</p>
-                            </div>
-                        </div>
-                        <div class="check-item check-pass">
-                            <span class="check-icon">✅</span>
-                            <div class="check-content">
-                                <strong>住宅密集度</strong>
-                                <p>理想: 500m圏に500世帯以上 → 実際: 4,500世帯（推定）</p>
-                            </div>
-                        </div>
-                        <div class="check-item check-pass">
-                            <span class="check-icon">✅</span>
-                            <div class="check-content">
-                                <strong>単身世帯率</strong>
-                                <p>理想: 40%以上 → 実際: 50%（推定）</p>
-                            </div>
-                        </div>
-                        <div class="check-item check-pass">
-                            <span class="check-icon">✅</span>
-                            <div class="check-content">
-                                <strong>競合密度</strong>
-                                <p>理想: 500mに2店舗以下 → 実際: 1店舗（推定）</p>
-                            </div>
-                        </div>
-                        <div class="check-item check-caution">
-                            <span class="check-icon">⚠️</span>
-                            <div class="check-content">
-                                <strong>駐車場</strong>
-                                <p>理想: あれば◎ → 実際: 近隣コインP利用想定</p>
-                            </div>
-                        </div>
+                        <div class="check-item check-pass"><span class="check-icon">✅</span><div class="check-content"><strong>駅からの距離</strong><p>理想: 徒歩5-15分 → 実際: 徒歩8-12分（推定）</p></div></div>
+                        <div class="check-item check-pass"><span class="check-icon">✅</span><div class="check-content"><strong>住宅密集度</strong><p>理想: 500m圏に500世帯以上 → 実際: 4,500世帯（推定）</p></div></div>
+                        <div class="check-item check-pass"><span class="check-icon">✅</span><div class="check-content"><strong>単身世帯率</strong><p>理想: 40%以上 → 実際: 50%（推定）</p></div></div>
+                        <div class="check-item check-pass"><span class="check-icon">✅</span><div class="check-content"><strong>競合密度</strong><p>理想: 500mに2店舗以下 → 実際: 1店舗（推定）</p></div></div>
+                        <div class="check-item check-caution"><span class="check-icon">⚠️</span><div class="check-content"><strong>駐車場</strong><p>理想: あれば◎ → 実際: 近隣コインP利用想定</p></div></div>
                     </div>
-                    <p class="conclusion-text">
-                        <strong>総合判定: ✅ 適地条件を概ね満たす</strong>
-                    </p>
+                    <p class="conclusion-text"><strong>総合判定: ✅ 適地条件を概ね満たす</strong></p>
                 </div>
 
-                <!-- 論理構造 -->
                 <div class="card logic-tree">
                     <h3>🎯 選定ロジック（投資家向け説明用）</h3>
                     <div class="tree-structure">
-                        <div class="tree-root">
-                            <strong>大田区蒲田を選ぶべき理由</strong>
-                        </div>
+                        <div class="tree-root"><strong>大田区蒲田を選ぶべき理由</strong></div>
                         <div class="tree-branches">
-                            <div class="tree-branch">
-                                <div class="branch-title">経済合理性（定量）</div>
-                                <ul>
-                                    <li>運営コスト: -600万円/5年</li>
-                                    <li>賃料コスト: -600万円/5年</li>
-                                    <li><strong>合計: -1,200万円/5年</strong></li>
-                                    <li class="highlight-text">= 初期投資の48%</li>
-                                </ul>
-                            </div>
-                            <div class="tree-branch">
-                                <div class="branch-title">需要の確実性（定量）</div>
-                                <ul>
-                                    <li>人口密度: 4,500世帯/500m圏</li>
-                                    <li>単身世帯率: 50%</li>
-                                    <li><strong>潜在顧客: 450世帯</strong></li>
-                                </ul>
-                            </div>
-                            <div class="tree-branch">
-                                <div class="branch-title">リスク管理（定性）</div>
-                                <ul>
-                                    <li>緊急対応: 30分以内</li>
-                                    <li>顧客接点: 地元密着</li>
-                                    <li><strong>精神的負担の軽減</strong></li>
-                                </ul>
-                            </div>
+                            <div class="tree-branch"><div class="branch-title">経済合理性（定量）</div><ul><li>運営コスト: -600万円/5年</li><li>賃料コスト: -600万円/5年</li><li><strong>合計: -1,200万円/5年</strong></li><li class="highlight-text">= 初期投資の48%</li></ul></div>
+                            <div class="tree-branch"><div class="branch-title">需要の確実性（定量）</div><ul><li>人口密度: 4,500世帯/500m圏</li><li>単身世帯率: 50%</li><li><strong>潜在顧客: 450世帯</strong></li></ul></div>
+                            <div class="tree-branch"><div class="branch-title">リスク管理（定性）</div><ul><li>緊急対応: 30分以内</li><li>顧客接点: 地元密着</li><li><strong>精神的負担の軽減</strong></li></ul></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 要確認事項 -->
                 <div class="card caution-card">
                     <div class="card-icon">⚠️</div>
                     <div class="card-content">
                         <h3>今後の確認事項</h3>
                         <table class="task-table">
-                            <thead>
-                                <tr>
-                                    <th>項目</th>
-                                    <th>調査方法</th>
-                                    <th>優先度</th>
-                                </tr>
-                            </thead>
+                            <thead><tr><th>項目</th><th>調査方法</th><th>優先度</th></tr></thead>
                             <tbody>
-                                <tr>
-                                    <td>競合店舗の実態</td>
-                                    <td>現地訪問・時間帯別観察</td>
-                                    <td><span class="priority-high">A</span></td>
-                                </tr>
-                                <tr>
-                                    <td>賃料相場</td>
-                                    <td>不動産屋3社ヒアリング</td>
-                                    <td><span class="priority-high">A</span></td>
-                                </tr>
-                                <tr>
-                                    <td>人口統計</td>
-                                    <td>大田区統計書・国勢調査</td>
-                                    <td><span class="priority-high">A</span></td>
-                                </tr>
-                                <tr>
-                                    <td>物件条件</td>
-                                    <td>内見3件以上</td>
-                                    <td><span class="priority-high">A</span></td>
-                                </tr>
-                                <tr>
-                                    <td>周辺環境</td>
-                                    <td>現地調査（人通り等）</td>
-                                    <td><span class="priority-medium">B</span></td>
-                                </tr>
+                                <tr><td>競合店舗の実態</td><td>現地訪問・時間帯別観察</td><td><span class="priority-high">A</span></td></tr>
+                                <tr><td>賃料相場</td><td>不動産屋3社ヒアリング</td><td><span class="priority-high">A</span></td></tr>
+                                <tr><td>人口統計</td><td>大田区統計書・国勢調査</td><td><span class="priority-high">A</span></td></tr>
+                                <tr><td>物件条件</td><td>内見3件以上</td><td><span class="priority-high">A</span></td></tr>
+                                <tr><td>周辺環境</td><td>現地調査（人通り等）</td><td><span class="priority-medium">B</span></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -770,17 +251,11 @@
             </div>
         </section>
 
-        <!-- コネクター: 立地分析 → 店舗サイズ -->
         <div class="section-connector">
-            <svg class="connector-arrow" viewBox="0 0 100 100">
-                <path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-            </svg>
-            <div class="connector-bubble">
-                立地が確定したら<br>次は店舗サイズを決定
-            </div>
+            <svg class="connector-arrow" viewBox="0 0 100 100"><path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/></svg>
+            <div class="connector-bubble">立地が確定したら<br>次は店舗サイズを決定</div>
         </div>
 
-        <!-- セクション2: 店舗サイズ -->
         <section id="size" class="content-section section-size">
             <div class="container">
                 <div class="section-header">
@@ -788,75 +263,134 @@
                     <h2>想定する店舗サイズ</h2>
                     <p class="section-subtitle">Assumed Store Size</p>
                 </div>
-
-                <div class="size-overview">
-                    <div class="size-card highlight">
-                        <div class="size-number">12-14坪</div>
-                        <div class="size-sqm">約40-46㎡</div>
-                    </div>
-                </div>
-
+                <div class="size-overview"><div class="size-card highlight"><div class="size-number">12-14坪</div><div class="size-sqm">約40-46㎡</div></div></div>
                 <div class="equipment-grid">
-                    <div class="equipment-card">
-                        <div class="equipment-icon">🔄</div>
-                        <h3>洗濯乾燥機(大型)</h3>
-                        <p class="en">Large Washer-Dryer</p>
-                        <div class="quantity">× 2台</div>
-                    </div>
-                    <div class="equipment-card">
-                        <div class="equipment-icon">🌀</div>
-                        <h3>洗濯機(中型)</h3>
-                        <p class="en">Medium Washer</p>
-                        <div class="quantity">× 4台</div>
-                    </div>
-                    <div class="equipment-card">
-                        <div class="equipment-icon">💨</div>
-                        <h3>乾燥機</h3>
-                        <p class="en">Dryer</p>
-                        <div class="quantity">× 8台</div>
-                    </div>
-                    <div class="equipment-card">
-                        <div class="equipment-icon">💴</div>
-                        <h3>両替機</h3>
-                        <p class="en">Change Machine</p>
-                        <div class="quantity">× 1台</div>
-                    </div>
+                    <div class="equipment-card"><div class="equipment-icon">🔄</div><h3>洗濯乾燥機(大型)</h3><p class="en">Large Washer-Dryer</p><div class="quantity">× 2台</div></div>
+                    <div class="equipment-card"><div class="equipment-icon">🌀</div><h3>洗濯機(中型)</h3><p class="en">Medium Washer</p><div class="quantity">× 4台</div></div>
+                    <div class="equipment-card"><div class="equipment-icon">💨</div><h3>乾燥機</h3><p class="en">Dryer</p><div class="quantity">× 8台</div></div>
+                    <div class="equipment-card"><div class="equipment-icon">💴</div><h3>両替機</h3><p class="en">Change Machine</p><div class="quantity">× 1台</div></div>
                 </div>
-
                 <div class="reasoning-box">
                     <h3>📐 サイズ設定の根拠</h3>
                     <p class="en-sub">Reasoning for Store Size</p>
                     <ul class="reasoning-list">
-                        <li>
-                            <span class="icon">✓</span>
-                            <div>
-                                <strong>通路幅の確保</strong>
-                                <p>利用者のすれ違い・カート移動に最低80cm必要</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            <div>
-                                <strong>作業スペース</strong>
-                                <p>洗濯物の仕分け・折りたたみに2㎡程度必要</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="icon">✓</span>
-                            <div>
-                                <strong>保守・清掃効率</strong>
-                                <p>機器裏側へのアクセス・日常清掃の動線確保</p>
-                            </div>
-                        </li>
+                        <li><span class="icon">✓</span><div><strong>通路幅の確保</strong><p>利用者のすれ違い・カート移動に最低80cm必要</p></div></li>
+                        <li><span class="icon">✓</span><div><strong>作業スペース</strong><p>洗濯物の仕分け・折りたたみに2㎡程度必要</p></div></li>
+                        <li><span class="icon">✓</span><div><strong>保守・清掃効率</strong><p>機器裏側へのアクセス・日常清掃の動線確保</p></div></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- 残りのセクションは省略（元のコードと同じ）-->
-        <!-- コネクター2以降は現状のコードをそのまま続けてください -->
+        <div class="section-connector"><svg class="connector-arrow" viewBox="0 0 100 100"><path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/></svg><div class="connector-bubble">この規模なら<br>初期投資は...</div></div>
 
-    <!-- 以下、元のHTMLの残り部分を続ける（コネクター2から最後まで）-->
+        <section id="investment" class="content-section section-investment">
+            <div class="container">
+                <div class="section-header"><span class="section-number">03</span><h2>初期投資の目安</h2><p class="section-subtitle">Initial Investment</p></div>
+                <div class="investment-breakdown">
+                    <div class="breakdown-item"><div class="breakdown-label"><span class="icon">⚙️</span><div><strong>機械設備</strong><p class="en">Equipment</p></div></div><div class="breakdown-bar"><div class="bar-fill" style="width: 60%;" data-amount="1,500万円"></div></div><div class="breakdown-amount">1,500万円</div></div>
+                    <div class="breakdown-item"><div class="breakdown-label"><span class="icon">🏗️</span><div><strong>内装・工事</strong><p class="en">Interior & Utilities</p></div></div><div class="breakdown-bar"><div class="bar-fill" style="width: 32%;" data-amount="800万円"></div></div><div class="breakdown-amount">800万円</div></div>
+                    <div class="breakdown-item"><div class="breakdown-label"><span class="icon">📋</span><div><strong>その他</strong><p class="en">Others</p></div></div><div class="breakdown-bar"><div class="bar-fill" style="width: 8%;" data-amount="200万円"></div></div><div class="breakdown-amount">200万円</div></div>
+                    <div class="breakdown-total"><strong>合計</strong><span class="total-amount">2,300-2,700万円</span></div>
+                </div>
+            </div>
+        </section>
 
+        <div class="section-connector"><svg class="connector-arrow" viewBox="0 0 100 100"><path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/></svg><div class="connector-bubble">この投資額で<br>借りられる家賃は...</div></div>
+
+        <section id="rent" class="content-section section-rent">
+            <div class="container">
+                <div class="section-header"><span class="section-number">04</span><h2>想定家賃(大田区蒲田)</h2><p class="section-subtitle">Estimated Rent (Kamata, Ota-ku)</p></div>
+                <div class="rent-card"><div class="rent-amount"><span class="currency">¥</span><span class="amount">200,000</span><span class="period">/月</span></div><p class="rent-note">※ 1階路面店・17坪・駅徒歩8-12分を想定<br>※ 坪単価 約12,000円</p></div>
+            </div>
+        </section>
+
+        <div class="section-connector"><svg class="connector-arrow" viewBox="0 0 100 100"><path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/></svg><div class="connector-bubble">この条件で<br>融資は受けられる?</div></div>
+
+        <section id="financing" class="content-section section-financing">
+            <div class="container">
+                <div class="section-header"><span class="section-number">05</span><h2>融資の現実性</h2><p class="section-subtitle">Financing Feasibility</p></div>
+                <div class="financing-flow">
+                    <div class="flow-step"><div class="step-icon">📝</div><div class="step-content"><h3>事業計画書作成</h3><p class="difficulty indie">個人:★★★ 難</p><p class="difficulty fc">FC:★☆☆ テンプレあり</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step"><div class="step-icon">🏦</div><div class="step-content"><h3>金融機関審査</h3><p class="difficulty indie">個人:日本政策金融公庫</p><p class="difficulty fc">FC:公庫+提携金融機関</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step"><div class="step-icon">🤝</div><div class="step-content"><h3>面談・現地調査</h3><p class="difficulty indie">個人:実績なしで説得必要</p><p class="difficulty fc">FC:モデル実績で評価</p></div></div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step success"><div class="step-icon">✅</div><div class="step-content"><h3>融資実行</h3></div></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-connector"><svg class="connector-arrow" viewBox="0 0 100 100"><path d="M50 10 L50 90" stroke="#FFD700" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/></svg><div class="connector-bubble">融資を受けたら<br>何年で回収?</div></div>
+
+        <section id="payback" class="content-section section-payback">
+            <div class="container">
+                <div class="section-header"><span class="section-number">06</span><h2>5年回収シミュレーション</h2><p class="section-subtitle">5-Year Payback Simulation</p></div>
+                <div class="simulation-warning">⚠️ 超保守的試算(月間純利益5万円想定)</div>
+                <div class="timeline-container">
+                    <div class="timeline-track">
+                        <div class="timeline-year" data-year="1"><div class="year-label">Year 1</div><div class="year-amount">60万円</div><div class="year-bar" style="height: 20%;"></div></div>
+                        <div class="timeline-year" data-year="2"><div class="year-label">Year 2</div><div class="year-amount">120万円</div><div class="year-bar" style="height: 40%;"></div></div>
+                        <div class="timeline-year" data-year="3"><div class="year-label">Year 3</div><div class="year-amount">180万円</div><div class="year-bar" style="height: 60%;"></div></div>
+                        <div class="timeline-year" data-year="4"><div class="year-label">Year 4</div><div class="year-amount">240万円</div><div class="year-bar" style="height: 80%;"></div></div>
+                        <div class="timeline-year" data-year="5"><div class="year-label">Year 5</div><div class="year-amount">300万円</div><div class="year-bar" style="height: 100%;"></div></div>
+                    </div>
+                </div>
+                <div class="simulation-note"><p>※ 初期投資2,500万円の場合、<strong>単店舗では回収困難</strong></p><p>※ 複数店舗展開・効率化が前提</p></div>
+            </div>
+        </section>
+
+        <div class="section-connector fork">
+            <div class="fork-question">どちらを選ぶ?</div>
+            <svg class="connector-fork" viewBox="0 0 200 100"><path d="M100 10 L100 40 M100 40 L50 80 M100 40 L150 80" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+        </div>
+
+        <section id="comparison" class="content-section section-comparison">
+            <div class="container">
+                <div class="section-header"><span class="section-number">07</span><h2>開業形態の比較</h2><p class="section-subtitle">Business Model Comparison</p></div>
+                <div class="comparison-grid">
+                    <div class="comparison-card indie-card">
+                        <div class="card-header"><h3>個人開業</h3><p class="en">Independent</p></div>
+                        <div class="card-section"><h4>👍 メリット</h4><ul><li>初期費用を抑えやすい</li><li>店舗設計の自由度が高い</li><li>ロイヤリティ不要</li></ul></div>
+                        <div class="card-section"><h4>👎 デメリット</h4><ul><li>全て自己判断・自己責任</li><li>融資審査のハードル高</li><li>ノウハウ蓄積に時間</li></ul></div>
+                        <div class="card-footer"><strong>向いている人</strong><p>コスト重視・試行錯誤を楽しめる</p></div>
+                    </div>
+                    <div class="comparison-card fc-card">
+                        <div class="card-header"><h3>フランチャイズ</h3><p class="en">Franchise</p></div>
+                        <div class="card-section"><h4>👍 メリット</h4><ul><li>開業マニュアル完備</li><li>融資が通りやすい</li><li>集客・運営サポートあり</li></ul></div>
+                        <div class="card-section"><h4>👎 デメリット</h4><ul><li>加盟金・ロイヤリティ負担</li><li>本部ルールの制約</li><li>総投資額が高くなりがち</li></ul></div>
+                        <div class="card-footer"><strong>向いている人</strong><p>安心・サポート重視・早期立上げ</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="conclusion-section">
+            <div class="container">
+                <div class="conclusion-card">
+                    <h2>💡 まとめ</h2>
+                    <p class="en">Conclusion</p>
+                    <div class="conclusion-points">
+                        <div class="point"><span class="icon">📍</span><p>大田区蒲田は運営効率で5年1,200万円の差</p></div>
+                        <div class="point"><span class="icon">🎯</span><p>小型店舗(12-14坪)は現実的な選択肢</p></div>
+                        <div class="point"><span class="icon">💰</span><p>初期投資2,500万円前後が目安</p></div>
+                        <div class="point"><span class="icon">🏦</span><p>融資は計画書の質と形態で大きく変わる</p></div>
+                        <div class="point"><span class="icon">📈</span><p>単店舗回収は困難→複数店舗展開が前提</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>本資料の最新版: <a href="https://28yu.github.io/coin-second/">https://28yu.github.io/coin-second/</a></p>
+            <p class="note">※ 数値は概算・保守的試算であり、実際の事業計画には個別の精査が必要です</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
